@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RobotNavProj": {
+      "commandName": "Project",
+      "commandLineArgs": "RobotNav-test.txt"
+    }
+  }
+}
