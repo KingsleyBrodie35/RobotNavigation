@@ -8,27 +8,41 @@ namespace RobotNavProj
 {
     internal class Cell
     {
-        int x, y;
+        public int x, y;
         bool wall;
-        //List<Cell> edges;
+        bool goal;
+        bool start;
+        List<Cell> connectedCells;
 
         public Cell(int x, int y)
         {
             this.x = x;
             this.y = y;
-            //edges = new List<Cell>();
+            connectedCells = new List<Cell>();  
         }
-        
+
         public bool Wall
         {
             get { return wall; }
             set => wall = value;
         }
 
-        //public void AddEdge(Cell c)
-        //{
-        //    edges.Add(c);
-        //}
+        public bool Goal
+        {
+            get { return goal; }
+            set => wall = value;
+        }
+
+        public bool Start
+        {
+            get { return start; }
+            set => start = value;   
+        }
+
+        public void AddCell(Cell c)
+        {
+            connectedCells.Add(c);
+        }
 
     }
 }

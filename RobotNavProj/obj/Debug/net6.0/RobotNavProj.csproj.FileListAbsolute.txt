@@ -13,3 +13,18 @@ C:\Users\Kingsley Brodie\Desktop\Swinburne_computer_science\y3\IntroToAI\assigns
 C:\Users\Kingsley Brodie\Desktop\Swinburne_computer_science\y3\IntroToAI\assigns\RobotNav\RobotNavProj\RobotNavProj\obj\Debug\net6.0\RobotNavProj.pdb
 C:\Users\Kingsley Brodie\Desktop\Swinburne_computer_science\y3\IntroToAI\assigns\RobotNav\RobotNavProj\RobotNavProj\obj\Debug\net6.0\RobotNavProj.genruntimeconfig.cache
 C:\Users\Kingsley Brodie\Desktop\Swinburne_computer_science\y3\IntroToAI\assigns\RobotNav\RobotNavProj\RobotNavProj\obj\Debug\net6.0\ref\RobotNavProj.dll
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\obj\Debug\net6.0\RobotNavProj.csproj.AssemblyReference.cache
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\obj\Debug\net6.0\RobotNavProj.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\obj\Debug\net6.0\RobotNavProj.AssemblyInfoInputs.cache
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\obj\Debug\net6.0\RobotNavProj.AssemblyInfo.cs
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\obj\Debug\net6.0\RobotNavProj.csproj.CoreCompileInputs.cache
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\obj\Debug\net6.0\RobotNavProj.dll
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\obj\Debug\net6.0\refint\RobotNavProj.dll
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\obj\Debug\net6.0\RobotNavProj.pdb
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\bin\Debug\net6.0\RobotNavProj.exe
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\bin\Debug\net6.0\RobotNavProj.deps.json
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\bin\Debug\net6.0\RobotNavProj.runtimeconfig.json
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\bin\Debug\net6.0\RobotNavProj.dll
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\bin\Debug\net6.0\RobotNavProj.pdb
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\obj\Debug\net6.0\RobotNavProj.genruntimeconfig.cache
+C:\Users\KingsleyBrodie\Source\Repos\RobotNavigation\RobotNavProj\obj\Debug\net6.0\ref\RobotNavProj.dll

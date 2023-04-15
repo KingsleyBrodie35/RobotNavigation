@@ -10,7 +10,7 @@ namespace RobotNavProj
     {
         int rows, columns;
         Cell[,] map;
-        Agent agent;
+        Agent? agent;
 
         public Grid(int rows, int columns)
         {
@@ -60,6 +60,6 @@ namespace RobotNavProj
             map[y, x].Wall = true;
             
         }
-
+        
     }
 }

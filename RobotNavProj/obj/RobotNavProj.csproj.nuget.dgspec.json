@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kingsley Brodie\\Desktop\\Swinburne_computer_science\\y3\\IntroToAI\\assigns\\RobotNav\\RobotNavProj\\RobotNavProj\\RobotNavProj.csproj": {}
+    "C:\\Users\\KingsleyBrodie\\Source\\Repos\\RobotNavigation\\RobotNavProj\\RobotNavProj.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kingsley Brodie\\Desktop\\Swinburne_computer_science\\y3\\IntroToAI\\assigns\\RobotNav\\RobotNavProj\\RobotNavProj\\RobotNavProj.csproj": {
+    "C:\\Users\\KingsleyBrodie\\Source\\Repos\\RobotNavigation\\RobotNavProj\\RobotNavProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kingsley Brodie\\Desktop\\Swinburne_computer_science\\y3\\IntroToAI\\assigns\\RobotNav\\RobotNavProj\\RobotNavProj\\RobotNavProj.csproj",
+        "projectUniqueName": "C:\\Users\\KingsleyBrodie\\Source\\Repos\\RobotNavigation\\RobotNavProj\\RobotNavProj.csproj",
         "projectName": "RobotNavProj",
-        "projectPath": "C:\\Users\\Kingsley Brodie\\Desktop\\Swinburne_computer_science\\y3\\IntroToAI\\assigns\\RobotNav\\RobotNavProj\\RobotNavProj\\RobotNavProj.csproj",
-        "packagesPath": "C:\\Users\\Kingsley Brodie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kingsley Brodie\\Desktop\\Swinburne_computer_science\\y3\\IntroToAI\\assigns\\RobotNav\\RobotNavProj\\RobotNavProj\\obj\\",
+        "projectPath": "C:\\Users\\KingsleyBrodie\\Source\\Repos\\RobotNavigation\\RobotNavProj\\RobotNavProj.csproj",
+        "packagesPath": "C:\\Users\\KingsleyBrodie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\KingsleyBrodie\\Source\\Repos\\RobotNavigation\\RobotNavProj\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Kingsley Brodie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\KingsleyBrodie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

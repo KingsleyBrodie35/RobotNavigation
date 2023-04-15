@@ -24,27 +24,28 @@ namespace RobotNavProj
             //create grid
             Grid grid = new Grid(rows, columns);
             grid.createCells();
-            //create agent
-            //extract positions
+            //create Start & Goals
+            //Parse string to int
             MatchCollection startingPosMatches = findNum.Matches(lines[1], 0);
             MatchCollection goalMatches = findNum.Matches(lines[2], 0);
             int startX = 0, startY = 0, goal0x = 0, goal0y = 0, goal1x = 0, goal1y = 0;
             try
             {
-                startX = Int32.Parse(startingPosMatches[0].Value);
-                startY = Int32.Parse(startingPosMatches[1].Value);
-                goal0x = Int32.Parse(goalMatches[0].Value);
-                goal0y = Int32.Parse(goalMatches[1].Value);
-                goal1x = Int32.Parse(goalMatches[2].Value);
-                goal1y = Int32.Parse(goalMatches[3].Value);
+                startY = Int32.Parse(startingPosMatches[0].Value);
+                startX = Int32.Parse(startingPosMatches[1].Value);
+                goal0y = Int32.Parse(goalMatches[0].Value);
+                goal0x = Int32.Parse(goalMatches[1].Value);
+                goal1y = Int32.Parse(goalMatches[2].Value);
+                goal1x = Int32.Parse(goalMatches[3].Value);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
             }
-            Tuple<int, int> start = new Tuple<int, int>(startX, startY);
-            Tuple<int, int, int, int> goals = new Tuple<int, int, int, int>(goal0x, goal0y, goal1x, goal1y);
-            Agent agent = grid.generateAgent(start, goals);
+            grid.Map[startX, startY].Start = true;
+            grid.Map[goal0x, goal0y].Goal = true;
+            grid.Map[goal1x, goal1y].Goal = true;
+
             //createWalls
             for (int i = 3; i < lines.Length; i++)
             {
@@ -77,35 +78,114 @@ namespace RobotNavProj
             }
             int idx = 0;
             //create Graph
-            Graph graph = new Graph(rows * columns);
-            for (int i = 0; i < rows; i++)
+            Queue<Cell> frontier = new Queue<Cell>();
+            frontier.Enqueue(grid.Map[startX, startY]);
+            while (frontier.Count != 0)
             {
-                for (int j = 0; j < columns; j++)
+                Cell cell = frontier.Dequeue();
+
+                //add connected cells to cell edges
+                //up
+                if (cell.x - 1 != -1)
                 {
-                    //up
-                    if (i - 1 != -1)
+                    if (!cell.Wall && !grid.Map[cell.x - 1, cell.y].Wall)
                     {
-                        graph.AddEdge(idx, grid.Map[i - 1, j]);
+                        cell.AddCell(grid.Map[cell.x - 1, cell.y]);
+                        frontier.Enqueue(grid.Map[cell.x - 1, cell.y]);
                     }
-                    //left
-                    if (j - 1 != -1)
-                    {
-                        graph.AddEdge(idx, grid.Map[i, j - 1]);
-                    }
-                    //down
-                    if (i + 1 < rows)
-                    {
-                        graph.AddEdge(idx, grid.Map[i + 1, j]);
-                    }
-                    //right
-                    if (j + 1 < columns)
-                    {
-                        graph.AddEdge(idx, grid.Map[i, j + 1]);
-                    }
-                    idx++;
                 }
-                Console.WriteLine("Hello");
+                //Left
+                if (cell.y - 1 != -1)
+                {
+                    if (!cell.Wall && !grid.Map[cell.x, cell.y - 1].Wall)
+                    {
+                        cell.AddCell(grid.Map[cell.x, cell.y - 1]);
+                        frontier.Enqueue(grid.Map[cell.x, cell.y - 1]);
+                    }
+                } 
+                //Down
+                if (cell.x + 1 < rows)
+                {
+                    if (!cell.Wall && !grid.Map[cell.x + 1, cell.y].Wall)
+                    {
+                        cell.AddCell(grid.Map[cell.x + 1, cell.y]);
+                        frontier.Enqueue(grid.Map[cell.x + 1, cell.y]);
+                    }
+                }
+                //Right
+                if (cell.y + 1 < columns)
+                {
+                    if (!cell.Wall && !grid.Map[cell.x, cell.y + 1].Wall)
+                    {
+                        cell.AddCell(grid.Map[cell.x, cell.y + 1]);
+                        frontier.Enqueue(grid.Map[cell.x, cell.y + 1]);
+                    }
+                }
             }
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    for (int j = 0; j < columns; j++)
+            //    {
+            //        //up
+            //        if (i - 1 != -1)
+            //        {
+            //            if (!grid.Map[i, j].Wall && !grid.Map[i - 1, j].Wall)
+            //            {
+            //                graph.AddEdge(idx, grid.Map[i - 1, j]);
+            //            }
+            //        }
+            //        //left
+            //        if (j - 1 != -1)
+            //        {
+            //            if (!grid.Map[i, j].Wall && !grid.Map[i, j - 1].Wall)
+            //            {
+            //                graph.AddEdge(idx, grid.Map[i, j - 1]);
+            //            }
+            //        }
+            //        //down
+            //        if (i + 1 < rows) 
+            //        { 
+            //            if (!grid.Map[i, j].Wall && !grid.Map[i + 1, j].Wall)
+            //            {
+            //                graph.AddEdge(idx, grid.Map[i + 1, j]);
+            //            }
+            //        }
+            //        //right
+            //        if (j + 1 < columns)
+            //        {
+            //            if (!grid.Map[i, j].Wall && !grid.Map[i, j + 1].Wall)
+            //            {
+            //                graph.AddEdge(idx, grid.Map[i, j + 1]);
+            //            }
+            //        }
+            //        idx++;
+            //    }
+                
+            //}
+            //Cell c = graph.BFS(grid.Map[startX, startY], grid);
+            //Console.WriteLine("mod y " + 36 % 11);
         }
     }
 }
